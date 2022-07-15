@@ -1,0 +1,16 @@
+;; Comments for top of methods, classes
+(defun jocuman/insert-header-tag ()
+  "Insert header at cursor point."
+  (interactive)
+  (let ((foo (current-column)))
+    ;; (insert "# =======================================================================")
+    (insert "#")
+    (newline)
+    (insert-char ?\s foo)
+    (insert "#")
+    (newline)
+    (insert-char ?\s foo)
+    (insert "#")
+    (newline)
+    (insert-char ?\s foo)))
+(global-set-key "\C-xp" 'jocuman/insert-header-tag)
